@@ -9,15 +9,15 @@ public class Main {
 
         for (int i = 0; i < codeOryginal.length(); i++) {
             int charAfterSlide = codeOryginal.charAt(i) + slide;
-            if (charAfterSlide > 122) {
-                charAfterSlide = charAfterSlide - 26;
+            if (charAfterSlide > 'z') {
+                charAfterSlide = charAfterSlide - ('z' -'a');
             }
             codAfterSlide = codAfterSlide + (char) charAfterSlide;
         }
         for (int i = 0; i < codAfterSlide.length(); i++) {
             int charAfterSlide = codAfterSlide.charAt(i) - slide;
-            if (charAfterSlide < 97 && charAfterSlide != 32) {
-                charAfterSlide = charAfterSlide + 26;
+            if (charAfterSlide < 'a' && charAfterSlide != ' ') {
+                charAfterSlide = charAfterSlide + ('z' -'a');
             }
             codeAfterDecode = codeAfterDecode + (char) charAfterSlide;
         }
